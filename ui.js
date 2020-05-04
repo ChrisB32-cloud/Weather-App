@@ -29,7 +29,7 @@ class UI {
     )}\u00B0F`;
     this.pressure.textContent = `Pressure: ${convertPhaToPsi(
       weather.main.pressure
-    )} Per in.`;
+    )} - Per in.`;
     this.windSpeed.textContent = `Wind Speed: ${metersPerSecondToMilesPerHour(
       weather.wind.speed
     )} mph`;
