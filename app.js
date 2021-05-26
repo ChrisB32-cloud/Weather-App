@@ -33,6 +33,25 @@ document.getElementById('w-change-btn').addEventListener('click', e => {
   // $('#locModal').modal('hide');
 });
 
+// Get Weather on save get-weath
+document.getElementById('get-weath').addEventListener('click', e => {
+  e.preventDefault();
+  const city = document.getElementById('city').value;
+  const country = document.getElementById('country').value;
+
+  // Change location
+  weather.changeLocation(city, country);
+
+  // Set Location in Local st
+  storage.setLocationData(city, country);
+
+  // Get and display weather
+  getWeather();
+
+  // Close modal
+  // $('#locModal').modal('hide');
+});
+
 // maybe the problem is here when passing the results
 // to ui.paint
 

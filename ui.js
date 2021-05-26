@@ -14,13 +14,14 @@ class UI {
   // issue could be here
   paint(weather) {
     this.location.textContent = `${weather.name}, ${weather.sys.country}`;
-    this.desc.textContent = weather.weather[0].main;
+    this.desc.textContent = weather.weather[0].description;
     this.string.textContent = `${convertToFarenhit_FeelsLike(
       weather.main.temp
     )}\u00B0F`;
+    this.icon.setAttribute('src', weather.weather[0].icon)
 
     // Trying to make this icon show but not sure how to with this api
-    // this.icon.textContent = weather.weather[0].icon;
+    console.log(this.icon.textContent = weather)
     // I know textContent isn't the right method but having trouble finding the right route
 
     this.humidity.textContent = `Humidty: ${weather.main.humidity}%`;
