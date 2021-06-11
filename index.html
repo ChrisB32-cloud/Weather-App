@@ -13,17 +13,25 @@
 <body>
   <style>
     body {
+      background-image: url("vid/weathImg.jpg");
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Do not repeat the image */
+      background-size: cover;
       background-color: lightslategray;
     }
   </style>
-  <video src="/vid/weathe.mp4" muted loop autoplay style="right: 0; bottom: 0; position: fixed;">
-  </video>
-
-  <div class="container" style="position: fixed;">
+  <!-- <video src="/vid/weathe.mp4" muted loop autoplay style="right: 0; bottom: 0; position: fixed;">
+  </video> -->
+  <!-- style="position: fixed;" -->
+  <!-- bg-primary -->
+  <div class="container bg-transparent">
     <div class="row">
-      <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+      <div class="col-md-6 mx-auto text-center bg-transparent mt-5 p-5 rounded border border-dark">
+        <!-- text-dark -->
         <h1 id="w-location"></h1>
-        <h3 class="text-dark" id="w-desc"></h3>
+        <h3 class="text-light" id="w-desc"></h3>
         <h3 id="w-string"></h3>
         <img id="w-icon">
         <ul id="w-details" class="list-group mt-3">
